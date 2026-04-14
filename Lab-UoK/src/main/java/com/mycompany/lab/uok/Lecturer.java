@@ -13,13 +13,13 @@ public class Lecturer extends StaffMember {
         this.paymentPerCourse = paymentPerCourse;
     }
 
-    // A lecturer is paid per course they teach each month
+   
     @Override
     public double calculateMonthlyPayment() {
         return courseCount * paymentPerCourse;
     }
 
-    // Displays full lecturer details, starting with the inherited common details
+    
     public void displayLecturerDetails() {
         System.out.println("-- Lecturer Details --");
         displayBasicDetails();                          // inherited final method

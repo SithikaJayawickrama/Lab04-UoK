@@ -2,15 +2,15 @@ package com.mycompany.lab.uok;
 
 public class LabAssistant extends StaffMember {
 
-    private int hoursWorked;
+    private int    hoursWorked;
     private double hourlyRate;
 
     // Constructor uses super(...) to initialise the fields defined in StaffMember
     public LabAssistant(String fullName, String staffId, String department,
-            int hoursWorked, double hourlyRate) {
+                        int hoursWorked, double hourlyRate) {
         super(fullName, staffId, department);
         this.hoursWorked = hoursWorked;
-        this.hourlyRate = hourlyRate;
+        this.hourlyRate  = hourlyRate;
     }
 
     // A lab assistant is paid based on hours worked each month

@@ -3,7 +3,7 @@ package com.mycompany.lab.uok;
 public final class UniversityPolicy {
 
     public static final String UNIVERSITY_NAME = "University of Kelaniya";
-    public static final double BONUS_RATE       = 0.10;   // 10 % bonus
+    public static final double BONUS_RATE       = 0.10;   
 
     // Prints a standard header that should appear above every policy report
     public static void showPolicyHeader() {

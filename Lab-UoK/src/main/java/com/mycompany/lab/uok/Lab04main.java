@@ -16,16 +16,16 @@ public class Lab04Main {
         System.out.println();
 
         // Create 3 staff objects (2 Lecturers + 1 LabAssistant)
-        Lecturer     lec1 = new Lecturer    ("Dr. Amal Perera",  "L-001", "Computing",         4, 15000.0);
-        Lecturer     lec2 = new Lecturer    ("Ms. Nisha Fernando","L-002","Engineering",        3, 12000.0);
-        LabAssistant lab1 = new LabAssistant("Mr. Kasun Silva",  "LA-001","Computing",        80,   350.0);
+        Lecturer lec1 = new Lecturer("Dr. Amal Perera", "L-001", "Computing", 4, 15000.0);
+        Lecturer lec2 = new Lecturer("Ms. Nisha Fernando", "L-002", "Engineering", 3, 12000.0);
+        LabAssistant lab1 = new LabAssistant("Mr. Kasun Silva", "LA-001", "Computing", 80, 350.0);
 
-        // Change the department of one object using controlled update 
+        // Change the department of one object using controlled update
         System.out.println("── Department Update ──");
         lab1.changeDepartment("Science & Technology");
         System.out.println();
 
-        // Display all 3 staff members 
+        // Display all 3 staff members
         lec1.displayLecturerDetails();
         System.out.println();
         lec2.displayLecturerDetails();
@@ -44,23 +44,24 @@ public class Lab04Main {
         System.out.printf("%-20s : %.2f%n", lab1.getFullName(), pay3);
         System.out.println();
 
-        // Total monthly payment 
+        // Total monthly payment
         double totalPay = pay1 + pay2 + pay3;
         System.out.printf("Total Monthly Payment : %.2f%n", totalPay);
         System.out.println();
 
-        // Bonus estimates 
+        // Bonus estimates
         System.out.println("── Bonus Estimates (10%) ──");
         System.out.printf("%-20s bonus : %.2f%n", lec1.getFullName(), UniversityPolicy.calculateBonus(pay1));
         System.out.printf("%-20s bonus : %.2f%n", lec2.getFullName(), UniversityPolicy.calculateBonus(pay2));
         System.out.printf("%-20s bonus : %.2f%n", lab1.getFullName(), UniversityPolicy.calculateBonus(pay3));
         System.out.println();
 
-        // staffCount is static: one shared counter for all objects, not a separate copy per object
+        // staffCount is static: one shared counter for all objects, not a separate copy
+        // per object
         System.out.println("Total Staff Created   : " + StaffMember.getStaffCount());
         System.out.println();
 
-       //showCommonNotice() for all 3 staff members
+        // showCommonNotice() for all 3 staff members
         System.out.println("── Common Notices ──");
         lec1.showCommonNotice();
         lec2.showCommonNotice();
